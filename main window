@@ -1,0 +1,91 @@
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import*
+
+def swich_screen():
+    if btn_answer.text()=="Відповісти":
+        qwestoion_group.hide()
+        answer_group.show()
+        btn_answer.setText("Наступне питання")
+    else:
+        question_group.show()
+        answer_group.hide()
+        btn_answer.setText("Відповісти")
+
+main_win=QWiget()
+main_win.resize(600,500)
+main_win.setWindowTitle("Memory card")
+main_win.move(300,300)
+
+btn_menu=QPushButton("Менню")
+btn_menu=QPushButton("Відпочити")
+btn_answer=QPushButton("Відповісти")
+timers=QSpinBox()
+timer.setVelue(30)
+time_text=QLabel("хвилини")
+
+text_qwestion=QLAbel("Питання")
+right_answer=QLabelW("Відповідь")
+text_result=QLabel("Результат")
+
+rbtn1=QRadioButton("1")
+rbtn2=QRadioButton("2")
+rbtn3=QRadioButton("3")
+rbtn4=QRadioButton("4")
+
+radiogroup=QButtonGroup()
+rediogroup.addButton(rbtn1)
+rediogroup.addButton(rbtn2)
+rediogroup.addButton(rbtn3)
+rediogroup.addButton(rbtn4)
+
+qwestoiongroup=Q
+
+qwestoion_group=QVBoxLayor()
+answer_group=QGroupBox()
+
+line=QVBoxLayout()
+line1=QVBoxLayout()
+line2=QVBoxLayout()
+line3=QVBoxLayout()
+line3_q=QVBoxLayout()
+line3_a=QVBoxLayout()
+line4=QVBoxLayout()
+
+line_v1=QVBoxLayor()
+line_v2=QVBoxLayor()
+
+line_v1.addWidget(rbtn1)
+line_v1.addWidget(rbtn2)
+line_v2.addWidget(rbtn3)
+line_v2.addWidget(rbtn4)
+
+line3_q.addLayour(line_v1)
+line3_1.addWidget(line_v2)
+
+qwestoion_group.setLayout(line3_q)
+
+line3_a.addWidget(text_result,alignment=(Qt.AlignLeft |Qt.AlignTop))
+line3_a.addWidget(right_answer,alignment=Qt.alignment)
+answer_group.setLayout()
+
+line1.addWidget(btn_menu)
+line1.addStrach(1)
+line1.addWidget(btn_sleep)
+line1.addWidget(timer)
+line1.addWidget(time_text)
+
+line2.addWidget(text_qwestion,alignment=Qt.AlightCenter)
+
+line3.addWidget(qwestoion_group)
+line3.addWidget(answer_group)
+line4.addStrach(1)
+line4.addWidget(btn_answer,stretch=2)
+line4.addStrach(1)
+
+line.addLayour(line1,strech=1)
+line.addLayour(line1,strech=2)
+line.addLayour(line1,strech=6)
+line.addStretch(1)
+line.addLayour(line1,strech=3)
+
+
